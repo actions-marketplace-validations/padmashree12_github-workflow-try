@@ -2,7 +2,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 # Install curl
-RUN sudo apt-get install curl
+RUN apk --no-cache add curl
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY contributors.sh /entrypoint.sh
