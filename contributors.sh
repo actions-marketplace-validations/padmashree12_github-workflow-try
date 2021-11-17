@@ -1,3 +1,4 @@
+#!/bin/bash
 
 curl 'https://api.github.com/repos/${1}/contributors' >> contributors.json
 
