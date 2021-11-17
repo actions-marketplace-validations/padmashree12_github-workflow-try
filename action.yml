@@ -1,5 +1,11 @@
 name: 'padmashree12 testing'
 description: 'Updates contributors file'
+inputs:
+  repo:  # id of input
+    description: 'Url of your repository'
+    required: true
+
+
 outputs:
   response:
     description: 'Output from command'
@@ -7,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ github.repository }}
+    - ${{ inputs.repo }}
